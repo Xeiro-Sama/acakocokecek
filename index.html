@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Randomizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <main class="container">
+
+        <header>
+            <div class="badge">CLASS HELPER</div>
+            <h1>CLASS <span>RANDOMIZER</span></h1>
+            <p>Capcipcup Simulator</p>
+        </header>
+
+        <section class="control-panel">
+
+            <div class="input-section">
+                <div class="section-title">
+                    <label for="names">LIST MURID</label>
+                    <span id="studentCount">0 students</span>
+                </div>
+
+                <textarea
+                    id="names"
+                    placeholder="Masukin nama murid, satu per baris. Contoh:
+
+Name
+Name
+Name
+Name"
+                ></textarea>
+            </div>
+
+            <div class="settings">
+
+                <div class="group-setting">
+                    <label for="groupCount">JUMLAH KELOMPOK</label>
+
+                    <div class="number-control">
+                        <button id="decreaseGroups">−</button>
+                        <input
+                            type="number"
+                            id="groupCount"
+                            min="1"
+                            value="4"
+                        >
+                        <button id="increaseGroups">+</button>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div>
+                        <strong id="totalStudents">0</strong>
+                        <span>Students</span>
+                    </div>
+
+                    <div>
+                        <strong id="totalGroups">4</strong>
+                        <span>Groups</span>
+                    </div>
+
+                    <div>
+                        <strong id="studentsPerGroup">0</strong>
+                        <span>Per Group</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="actions">
+            <button class="main-btn" id="randomizeBtn">
+                <span>↻</span> ACAK KELOMPOK
+            </button>
+
+            <button class="secondary-btn" id="randomStudentBtn">
+                RANDOM INDIVIDU
+            </button>
+
+            <button class="reset-btn" id="resetBtn">
+                RESET
+            </button>
+
+            <button class="sound-btn" id="soundToggle">
+                SOUND: ON
+            </button>
+        </section>
+
+        <div id="randomStudentDisplay" class="random-student hidden">
+            <div class="random-label">RANDOM INDIVIDU</div>
+            <div id="randomStudentName">---</div>
+        </div>
+
+        <section id="resultsSection" class="results-section hidden">
+
+            <div class="results-header">
+                <div>
+                    <div class="badge">RESULT</div>
+                    <h2>Kelompok</h2>
+                </div>
+
+                <button id="copyBtn" class="copy-btn">
+                    COPY HASIL
+                </button>
+            </div>
+
+            <div id="groupResults" class="group-grid"></div>
+
+        </section>
+
+        <div id="message" class="message"></div>
+
+        <footer>
+            CLASS RANDOMIZER • HAVE FUN • ENO.MADE
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
